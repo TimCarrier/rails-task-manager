@@ -1,0 +1,18 @@
+<h1>The fcking task</h1>
+<%= @task.title %>
+<%= @task.details %>
+<%= @task.completed %>
+<p>FCK THIS TASK</p>
+
+<%= link_to "Edit",
+  edit_path(@task)
+%>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<%= link_to "Home",
+  tasks_path
+%>
